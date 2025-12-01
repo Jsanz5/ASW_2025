@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario DOM</title>
+
+    <style>
+      :root {
+        --primary-color: #5993c0;
+        --secondary-color: #1f5387;
+        --background-color: #f3f6fb;
+        --input-bg: #ffffff;
+        --input-border: #b6cce0;
+        --focus-color: #3b7cb5;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--background-color);
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        color: var(--primary-color);
+      }
+
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 14px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        max-width: 420px;
+        width: 100%;
+        animation: fadeIn 0.4s ease;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: var(--secondary-color);
+        letter-spacing: 1px;
+        font-size: 26px;
+      }
+
+      /* Labels */
+      label {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--secondary-color);
+        font-weight: 600;
+      }
+
+      /* Inputs */
+      input,
+      select {
+        width: 100%;
+        margin-bottom: 18px;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 15px;
+        background: var(--input-bg);
+        border: 1.5px solid var(--input-border);
+        transition: all 0.25s ease;
+      }
+
+      /* Hover */
+      input:hover,
+      select:hover {
+        border-color: var(--primary-color);
+        background: #f8fbff;
+      }
+
+      /* Focus */
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: var(--focus-color);
+        box-shadow: 0 0 6px rgba(59, 124, 181, 0.4);
+      }
+
+      /* Botón */
+      .submit {
+        background: var(--secondary-color);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 12px 0;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+
+      .submit:hover {
+        background: #17446f;
+        transform: translateY(-2px);
+      }
+
+      .submit:active {
+        transform: translateY(1px);
+      }
+
+      #resultado {
+        margin-top: 25px;
+        padding: 20px;
+        background: #eef5ff;
+        border-left: 4px solid var(--secondary-color);
+        border-radius: 10px;
+        font-size: 16px;
+        color: var(--secondary-color);
+        max-width: 420px;
+        width: 100%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 id="titulo">Formulario</h1>
+
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" />
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" />
+
+        <label for="pais">Selecciona tu país:</label>
+        <select name="pais" id="pais">
+          <option value="">-- Selecciona --</option>
+          <option value="ES">España</option>
+          <option value="FR">Francia</option>
+          <option value="IT">Italia</option>
+          <option value="UK">Reino Unido</option>
+        </select>
+        <input class="submit" type="submit" value="Enviar" />
+      </form>
+      <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
