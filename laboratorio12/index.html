@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Formulario de Inscripción</h1>
+    <form id="FormularioInscripcion" action="procesar.php" method="post">
+      <!-- Fieldset para agrupar los campos -->
+      <fieldset>
+        <!-- Datos personales -->
+        <legend>Datos personales</legend>
+
+        <!-- Nombre -->
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Nombre"
+          required
+        />
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+
+        <!-- Contraseña -->
+        <label for="password">Contraseña:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Minimo 8 caracteres"
+          required
+        />
+
+        <!-- Stack Favorito -->
+        <label for="lenguaje">Stack Favorito:</label>
+        <select id="lenguaje" name="lenguaje" required>
+          <option value="">Seleccione un lenguaje</option>
+          <option value="javascript">JavaScript</option>
+          <option value="python">Python</option>
+          <option value="html">HTML</option>
+        </select>
+
+        <!-- Comentarios en Textarea -->
+        <label for="comentarios">Motivación:</label>
+        <textarea
+          id="comentarios"
+          name="comentarios"
+          placeholder="¿Por qué te interesa este curso?"
+          maxlength="200"
+        ></textarea>
+      </fieldset>
+
+      <!-- Botón de envío -->
+      <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Script para la validación de los campos -->
+    <script src="test.js"></script>
+  </body>
+</html>

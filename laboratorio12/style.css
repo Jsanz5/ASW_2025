@@ -1,0 +1,126 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Título */
+h1 {
+  margin-bottom: 15px;
+  font-size: 1.75rem;
+  color: #3730a3;
+}
+
+/* Card */
+form {
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Fieldset */
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
+  gap: 0.8rem;
+  border-radius: 20px;
+  padding: 12px;
+}
+
+/* Legend */
+legend {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 1rem 1rem 0 1rem;
+  color: #4f46e5;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Labels */
+label {
+  font-size: 0.83rem;
+  color: #374151;
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  width: 100%;
+  min-width: 200px;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background: #f9fafb;
+}
+
+/* Focus */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #6366f1;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(19, 23, 225, 0.2);
+  outline: none;
+}
+
+/* Textarea */
+textarea {
+  resize: none;
+  min-height: 85px;
+  text-align: center;
+}
+
+/* Botón */
+button {
+  margin: 1.2rem auto 0;
+  padding: 0.75rem 1.75rem;
+  border: none;
+  border-radius: 10px;
+  background: #6366f1;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: fit-content;
+  display: block;
+  font-size: 0.95rem;
+}
+
+/* Hover */
+button:hover {
+  background: #4f46e5;
+  transform: translateY(-1px);
+}
+
+/* Active */
+button:active {
+  transform: scale(0.98);
+}
